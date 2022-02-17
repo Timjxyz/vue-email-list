@@ -3,7 +3,7 @@ const app = new Vue(
         el: '#app',
         data: {
             
-            mailCasuali: '',
+            mailCasuali: [],
            
         },
 
@@ -16,10 +16,10 @@ const app = new Vue(
 
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((rispostaDelServer) => {
-                    this.mailCasuali=rispostaDelServer.data.response;
+                    this.mailCasuali.push(rispostaDelServer.data.response);
                     
+                    console.log(this.mailCasuali)
                 });
-                console.log(this.mailCasuali)
             }
 
         }

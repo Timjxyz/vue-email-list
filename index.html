@@ -9,10 +9,15 @@
 <body>
     
     <div id="app">
+       <div v-if="mailCasuali.length==10">
+           <ul v-for="mail in mailCasuali">
+               <li >{{mail}}</li>
+           </ul>
+
+       </div>
+
        
-        <ul>
-            <li  v-for="mail in mailCasuali">{{mail}}</li>
-        </ul>
+
     </div>
 
     <!-- development version, includes helpful console warnings -->
