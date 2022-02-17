@@ -18,8 +18,8 @@ const app = new Vue(
                 .then((rispostaDelServer) => {
                     this.mailCasuali=rispostaDelServer.data.response;
                     
-                    console.log(this.mailCasuali)
                 });
+                console.log(this.mailCasuali)
             }
 
         }
